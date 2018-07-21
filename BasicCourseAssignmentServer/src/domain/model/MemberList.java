@@ -21,7 +21,6 @@ public class MemberList implements MemberModel, Serializable{
 
 	public void addMember(Member member) {
 		this.member.add(member);
-		System.out.println(Log.getInstance().getTimestamp()); //observer
 	}
 
 	public Member removeMember(int index) {

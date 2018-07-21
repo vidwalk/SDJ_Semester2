@@ -21,7 +21,7 @@ public class RemoteMessageClient extends UnicastRemoteObject implements ReplyTo 
 				input = in.nextLine();
 				server.addMessage(input, this);
 				System.out.println("added the message to the list");
-			} while (!input.equals("EXIT"));
+			} while (!input.equals("exit"));
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

@@ -11,10 +11,9 @@ public Philosopher(int id, Fork leftFork, Fork rightFork)
 }
 	@Override
 	public void run() {
-		long time = (long) (Math.random() * 8000);
+		long time = (long) ( 2000);
 		while(true) {
 		try {
-			System.out.println( Thread.currentThread().getName() + " Takes the forks");
 			leftFork.getFork();
 			rightFork.getFork();
 			Thread.sleep(time);
@@ -26,7 +25,7 @@ public Philosopher(int id, Fork leftFork, Fork rightFork)
 			System.out.println(Thread.currentThread().getName() + " puts back the right fork " + rightFork.getId());
 			Thread.sleep(time);
 			System.out.println(Thread.currentThread().getName() + " Thinks");
-			
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
